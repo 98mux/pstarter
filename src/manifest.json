@@ -1,6 +1,6 @@
 {
-    "name": "vibemenu",
-    "short_name": "vibemenu",
+    "name": "pstarter",
+    "short_name": "pstarter",
     "start_url": "/",
     "display": "standalone",
     "orientation": "portrait",

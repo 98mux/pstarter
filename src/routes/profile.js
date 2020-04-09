@@ -1,5 +1,11 @@
 import { h, Component } from "preact";
-import style from "./style";
+import styled, { css } from "styled-components";
+
+const Div=styled.div`
+    padding: 56px 20px;
+    min-height: 100%;
+    width: 100%;
+`;
 
 export default class Profile extends Component {
     state = {
@@ -29,20 +35,13 @@ export default class Profile extends Component {
 
     // Note: `user` comes from the URL, courtesy of our router
     render({ user }, { time, count }) {
-        let nestedProfile = "";
-        if (user != null) {
-            nestedProfile = <Profile user={null} />;
-        }
 
         return (
-            <div class={style.profile}>
+            <Div>
                 <h1>Profile: {user}</h1>
                 <p>This is the user profile for a user named {user}.</p>
                 <p> Testing the hot-reload</p>
                 <p> Pretty cool! I love this! </p>
-                {nestedProfile}
-                {nestedProfile}
-                {nestedProfile}
                 <t>No!</t>
 
                 <div>Current time: {new Date(time).toLocaleString()}</div>
@@ -50,8 +49,8 @@ export default class Profile extends Component {
                 <p>
                     <button onClick={this.increment}>Click Me</button> Clicked{" "}
                     {count} times.
-                </p>
-            </div>
+                </p>-->
+            </Div>
         );
     }
 }

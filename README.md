@@ -1,22 +1,18 @@
-# vibemenu
+# Project starter
 
-## CLI Commands
 
-``` bash
-# install dependencies
-npm install
+## Dependencies
 
-# serve with hot reload at localhost:8080
-npm run dev
+preact
+    A smaller and faster react
 
-# build for production with minification
-npm run build
+Hookstate
+    Redux replacer. Managers state by using hooks. Very fast
 
-# test the production build locally
-npm run serve
+styled-components
+    Write css in js file. Everything in one.
 
-# run tests with jest and preact-render-spy 
-npm run test
-```
+styled-theming
+    Making different themes easy. Theme management
 
-For detailed explanation on how things work, checkout the [CLI Readme](https://github.com/developit/preact-cli/blob/master/README.md).
+
