@@ -1,7 +1,7 @@
 import { h, Component } from "preact";
-import styled, { css } from "styled-components";
+import { styled } from "linaria/react";
 
-const Div=styled.div`
+const Div = styled.div`
     padding: 56px 20px;
     min-height: 100%;
     width: 100%;
@@ -35,7 +35,6 @@ export default class Profile extends Component {
 
     // Note: `user` comes from the URL, courtesy of our router
     render({ user }, { time, count }) {
-
         return (
             <Div>
                 <h1>Profile: {user}</h1>
@@ -43,13 +42,12 @@ export default class Profile extends Component {
                 <p> Testing the hot-reload</p>
                 <p> Pretty cool! I love this! </p>
                 <t>No!</t>
-
                 <div>Current time: {new Date(time).toLocaleString()}</div>
-
                 <p>
                     <button onClick={this.increment}>Click Me</button> Clicked{" "}
                     {count} times.
-                </p>-->
+                </p>
+                -->
             </Div>
         );
     }

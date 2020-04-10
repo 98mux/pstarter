@@ -1,5 +1,5 @@
 import { h } from "preact";
-import styled, { css } from "styled-components";
+import { styled } from "linaria/react";
 
 const Div = styled.div`
     padding: 56px 20px;

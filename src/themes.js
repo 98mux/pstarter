@@ -1,35 +1,25 @@
-import styled, {ThemeProvider} from 'styled-components';
-import theme from 'styled-theming';
-// https://github.com/styled-components/styled-theming
-//Light/dark = the themes
-//default / primary / success / warning = variants
-// Eg <button varianta
-//
-//
-/*
-    Button.propTypes = {
-  variant: PropTypes.oneOf(['default', 'primary', 'success', 'warning'])
-};
+import { css } from 'linaria';
+// Create class names for different themes
+const lightmode = css`
+  --color-primary: #6200ee;
+  --color-accent: #03dac4;
+`;
 
-Button.defaultProps = {
-  variant: 'default',
-};
-    * */
-const backgroundColor = theme.variants('mode', 'variant', {
-  default: { light: 'gray', dark: 'darkgray' },
-  primary: { light: 'blue', dark: 'darkblue' },
-  success: { light: 'green', dark: 'darkgreen' },
-  warning: { light: 'orange', dark: 'darkorange' },
-});
+const darkmode = css`
+  --color-primary: #03a9f4;
+  --color-accent: #e91e63;
+`;
 
+
+//Can apply multiple different themes by multiple divs
 // Stateless functional component. Fast and gives good code quality
 const Theme = ({children, ...props}) => (
-    <ThemeProvider theme={{ mode: 'light'}}>
+    <div className={lightmode}>
+        <div>
         {children}
-    </ThemeProvider>
+        </div>
+    </div>
 );
 
 export default Theme;
 
-
-//Unsure about this?
